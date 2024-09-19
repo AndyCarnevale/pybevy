@@ -1,0 +1,15 @@
+[package]
+name = "pybevy"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "pybevy"
+crate-type = ["cdylib"]
+
+[dependencies]
+bevy = { version = "0.14.2", default-features = false }
+pyo3 = { version = "0.22.3", features = ["extension-module"] }
+
+[package.metadata.pyo3]
+extension-module = true
